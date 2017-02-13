@@ -1,0 +1,157 @@
+.dropdown.dropdown-navbar-box {
+    background: transparent;
+    border-right: 1px solid transparent;
+    border-left: 1px solid transparent;
+}
+.dropdown.dropdown-navbar-box.open {
+    background: transparent;
+    border-right: 1px solid transparent;
+    border-left: 1px solid transparent;
+}
+.dropdown.dropdown-navbar-box.open a,
+.dropdown.dropdown-navbar-box.open a:focus,
+.dropdown.dropdown-navbar-box.open a:hover {
+	background: transparent;
+	border-color: transparent;
+}
+.dropdown.dropdown-navbar-box.open a.dropdown-toggle,
+.dropdown.dropdown-navbar-box.open a.dropdown-toggle:focus,
+.dropdown.dropdown-navbar-box.open a.dropdown-toggle:hover {
+    color: #FFF;
+}
+.login-section-body {
+	box-shadow: none;
+	border: 0px solid rgba(0, 0, 0, 0.15);
+	border-top: 0px solid #FCFCFC;
+	margin-right: -1px;
+	width:400px;
+}
+.login-box, .register-box, .forgot-password-box {
+    width: 300px;
+    margin: 7% auto;
+}
+.login-section-body h1 {
+    font-size: 3rem;
+    font-weight: 500;
+    margin: 10px 0 25px;
+    text-align: left;
+    text-transform: uppercase;
+}
+.login-section-body a {
+	color: #179d82;
+    font-weight: 400;
+    text-transform: none;
+    font-size: 14px;
+    padding: 5px 0;
+    text-transform: normal;
+    display:block;
+}
+.hold-transition .btn-primary{
+	text-transform: uppercase;
+	font-size: 17px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1;
+    padding: 0.8em 1em;
+}
+.hold-transition .form-control{
+    font-size: 15px;
+    height: 46px;
+    line-height: 1.2;
+    padding: 11px;
+    border: 1px solid #cccccc;
+    border-radius: 1px;
+    font-family: "Gotham A","Gotham B";
+ }
+ .login-section-body .extra-action {
+    bottom: 20px;
+    text-align: center;
+    width: 100%;
+    font-size: 17px;
+    font-weight: 100;
+    line-height: 1;
+}
+.login-section-body .extra-action p a {
+    text-transform: uppercase;
+}
+.login-section-body .extra-action p, .login-section-body p.welcome {
+    font-size: 14px;
+    display: inline-block;
+    text-align: center;
+    font-family: "Gotham A","Gotham B";
+    margin-bottom: 0;
+    line-height: 0.6;
+    padding: 5px 0;
+}
+.navbar-default .nav li .login-section-body  a {
+    color: #179D82;
+    font-family: "Gotham A","Gotham B";
+    letter-spacing: 0;
+    font-weight: 100;
+}
+.login-section-body a[ui-sref="forgot-password"] small{
+    float:right;
+    text-transform:none;
+    font-size: 14px;
+    padding:5px 0;
+}
+
+.profile-dropdown-box::before {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: #fff none repeat scroll 0 0;
+    border-color: #fff #fff transparent transparent;
+    border-image: none;
+    border-style: solid;
+    border-width: 8px;
+    box-shadow: none;
+    box-sizing: border-box;
+    content: "";
+    height: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: rotate(135deg);
+    transform-origin: 0 0 0;
+    width: 0;
+}
+.profile-dropdown-box::after {
+    background: #fff none repeat scroll 0 0;
+    content: "";
+    display: block;
+    height: 20px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.profile-dropdown-box {
+    background-color: #ffffff;
+    border: none;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.176);
+    display: none;
+    float: left;
+    font-size: 12px;
+    left: 0;
+    list-style: outside none none;
+    min-width: 140px;
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    padding: 10px;
+    z-index: 1000;
+}
+.profile-dropdown-box>li>a{
+    padding: 3px;
+    text-transform: none;
+    font-size:12px;
+    line-height: 15px;
+}
+.profile-dropdown-box>li>a:hover{
+    background: #FFF;
+}
+.landing-page .navbar-default .nav li a.user-authenticated {
+    text-transform: capitalize;
+}

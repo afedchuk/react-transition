@@ -14,6 +14,10 @@ require('laravel-elixir-webpack-react');
  */
 
 elixir(mix => {
-    mix.sass('app.scss')
+    mix.styles([
+       		'https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css'
+       	], './public/css/app.css')
+    	.sass(['resources/assets/sass/*.scss',
+    		  'resources/assets/sass/components/*.scss'])
        .webpack('app.js');
 });

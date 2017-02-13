@@ -8,36 +8,55 @@
 
 import React, { Component } from 'react';
 import { Link } from 'react-router';
-import { logout } from '../actions/AppActions';
-import LoadingButton from './LoadingButton.react';
+import { Button, Nav, Navbar, NavDropdown, MenuItem, NavItem } from 'react-bootstrap';
 
-class Nav extends Component {
+import LoginForm from './LoginForm.react';
+
+export default class Navheader extends Component {
   render() {
+
     // Render either the Log In and register buttons, or the logout button
     // based on the current authentication state.
-    const navButtons = <div>
-          <Link to="/register" className="btn btn--login btn--nav">Register</Link>
-          <Link to="/login" className="btn btn--login btn--nav">Login</Link>
-        </div>;
-
     return(
-      <div className="nav">
-        <div className="nav__wrapper">
-          <Link to="/" className="nav__logo-wrapper"><h1 className="nav__logo">Login&nbsp;Flow</h1></Link>
-          { navButtons }
-        </div>
+      const dispatch = this.props.dispatch;
+const { formState, currentlySending } = this.props.data;
+        <div className="navbar-wrapper">
+          <nav className="navbar navbar-default navbar-fixed-top">
+              <div className="container">
+                  <div className="navbar-header page-scroll">
+                      <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                          <span className="sr-only">Toggle navigation</span>
+                          <span className="icon-bar"></span>
+                          <span className="icon-bar"></span>
+                          <span className="icon-bar"></span>
+                      </button>
+                      <Navbar.Brand>
+                        <a href="/" className="navbar-brand">Advertisement</a>
+                      </Navbar.Brand> 
+                  </div>
+                  <div className="navbar-collapse collapse" >
+                    <Nav className="navbar-nav navbar-right">
+                      <NavItem eventKey={1} className="page-scroll" href="#page-top">Home</NavItem>
+                      <NavItem eventKey={2} className="page-scroll" href="#features">Features</NavItem>
+                      <NavItem eventKey={3} className="page-scroll" href="#testimonials">Testimonials</NavItem>
+                      <NavItem eventKey={4} className="page-scroll" href="#pricing">Pricing</NavItem>
+                      <NavItem eventKey={4} className="page-scroll" href="#contact">Contact</NavItem>
+                      <NavDropdown eventKey="{5}" title="Sign In"  className="dropdown dropdown-navbar-box">
+                        <MenuItem eventKey="{5.1}">
+                            <div className="login-section-body">
+                                <LoginForm
+                            </div>
+                        </MenuItem>
+                      </NavDropdown>
+                      <NavDropdown eventKey="{6}" title="Andrii Fedchuk"  className="dropdown dropdown-navbar-box">
+                         <MenuItem eventKey={6.1}>Profile</MenuItem>
+                         <MenuItem eventKey={6.2}>Logout</MenuItem>
+                      </NavDropdown>
+                    </Nav>
+                  </div>
+              </div>
+          </nav>
       </div>
     );
   }
-
-  _logout() {
-    this.props.dispatch(logout());
-  }
 }
-
-Nav.propTypes = {
-  loggedIn: React.PropTypes.bool.isRequired,
-  currentlySending: React.PropTypes.bool.isRequired
-}
-
-export default Nav;
