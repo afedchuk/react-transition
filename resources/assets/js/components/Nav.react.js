@@ -13,6 +13,10 @@ import { Button, Nav, Navbar, NavDropdown, MenuItem, NavItem } from 'react-boots
 import LoginForm from './LoginForm.react';
 
 export default class Navheader extends Component {
+  constructor(props) {
+      super(props);
+  }
+
   render() {
 
     // Render either the Log In and register buttons, or the logout button
