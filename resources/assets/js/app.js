@@ -24,22 +24,17 @@
 // );
 import React from 'react'
 import { render } from 'react-dom'
+import { Router, Route, Link, browserHistory } from 'react-router'
 
-import HomePage from './components/pages/HomePage.react';
-import Nav from './components/Nav.react';
-import Footer from './components/Footer.react';
+import App from './components/App.react';
+import Home from './components/pages/HomePage.react';
+import NotFound from './components/pages/NotFound.react';
 
 render(
-    <div>
-        <header>
-            <Nav/>
-        </header>
-        <section>
-            <HomePage />
-        </section>
-        <section class="pre-footer"></section>
-        <footer>
-            <Footer/>
-        </footer>
-    </div>
+    <Router history={browserHistory}>
+        <Route component={App}>
+          <Route path="/" component={Home}/>
+          <Route path="*" component={NotFound}/>
+        </Route>
+    </Router>
     , document.getElementById('app'));

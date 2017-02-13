@@ -9,15 +9,23 @@
 // Import stuff
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Navheader from './Navheader.react';
+import Navheader from './Nav.react';
+import Footer from './Footer.react';
 
 class App extends Component {
   render() {
     return(
-      <div className="wrapper">
-        <Navheader loggedIn={this.props.data.loggedIn} history={this.props.history} location={this.props.location} dispatch={this.props.dispatch} currentlySending={this.props.data.currentlySending} />
-        { this.props.children }
-</div>
+    	<div>
+	        <header>
+	            <Navheader/>
+	        </header>
+	        <section>
+	            { this.props.children }
+	        </section>
+	        <footer>
+	            <Footer/>
+	        </footer>
+	    </div>
     )
   }
 }

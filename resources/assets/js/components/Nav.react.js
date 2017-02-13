@@ -18,8 +18,6 @@ export default class Navheader extends Component {
     // Render either the Log In and register buttons, or the logout button
     // based on the current authentication state.
     return(
-      const dispatch = this.props.dispatch;
-const { formState, currentlySending } = this.props.data;
         <div className="navbar-wrapper">
           <nav className="navbar navbar-default navbar-fixed-top">
               <div className="container">
@@ -44,7 +42,7 @@ const { formState, currentlySending } = this.props.data;
                       <NavDropdown eventKey="{5}" title="Sign In"  className="dropdown dropdown-navbar-box">
                         <MenuItem eventKey="{5.1}">
                             <div className="login-section-body">
-                                <LoginForm
+                                <LoginForm/>
                             </div>
                         </MenuItem>
                       </NavDropdown>
