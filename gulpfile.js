@@ -19,5 +19,5 @@ elixir(mix => {
        	], './public/css/app.css')
     	.sass(['resources/assets/sass/*.scss',
     		  'resources/assets/sass/components/*.scss'])
-       .webpack('app.js');
+       .webpack('index.js');
 });

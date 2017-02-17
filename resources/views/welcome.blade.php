@@ -12,6 +12,6 @@
 </head>
 <body class="landing-page">
     <div id="app"></div>
-    <script src="/js/app.js"></script>
+    <script src="/js/index.js"></script>
 </body>
 </html>
