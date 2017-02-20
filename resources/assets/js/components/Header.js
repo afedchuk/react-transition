@@ -12,9 +12,7 @@ class Header extends Component {
 	render() {
       const container = 
       <NavDropdown id="login-dropdown-box" eventKey="{5}" title="Sign In" to="/sign-in"  className="dropdown dropdown-navbar-box">
-          <Navbar.Collapse>
             <SignInFormContainer />
-          </Navbar.Collapse>
       </NavDropdown>
 
       const { type, authenticatedUser } = this.props;

@@ -9,11 +9,11 @@ function validate(values) {
   var errors = {};
   var hasErrors = false;
   if (!values.username || values.username.trim() === '') {
-    errors.username = 'Enter username';
+    errors.username = 'Email is required.';
     hasErrors = true;
   }
   if (!values.password || values.password.trim() === '') {
-    errors.password = 'Enter password';
+    errors.password = 'Password is required.';
     hasErrors = true;
   }
   return hasErrors && errors;
@@ -68,41 +68,43 @@ class SignInForm extends Component {
   render() {
     const {asyncValidating, handleSubmit, submitting} = this.props;
     return (
-     <div className="login-box animated">
-        <h1>Sign in</h1>
-        <form onSubmit={ handleSubmit(validateAndSignInUser) }>
-          <Field
-                 className="form-control"
-                 name="username"
-                 type="text"
-                 component={ renderField }
-                 label="Email address" />
-          <Field
-                 className="form-control"
-                 name="password"
-                 type="password"
-                 component={ renderField }
-                 label="Password" />
-          <Link
-            to="/forgot-password"
-            className="btn btn-error"> 
-             Forgot password?
-          </Link>
-          <button 
-            type="submit" 
-            className="btn btn-primary block full-width m-b"
-            disabled={ submitting }>
-            Sign In
-          </button>
-          <div className="extra-action">
-              <p className="welcome">Do not have an account?</p>
-              <Link
-                to="/registration"
-                className="sref"> 
-                 Registration
-              </Link>
-          </div>
-        </form>
+      <div className="login-section-body">
+        <div className="login-box animated">
+          <h1>Sign in</h1>
+          <form onSubmit={ handleSubmit(validateAndSignInUser) }>
+            <Field
+                   className="form-control"
+                   name="username"
+                   type="text"
+                   component={ renderField }
+                   label="Email address" />
+            <Field
+                   className="form-control"
+                   name="password"
+                   type="password"
+                   component={ renderField }
+                   label="Password" />
+            <Link
+              to="/forgot-password"
+              className="btn btn-error"> 
+               Forgot password?
+            </Link>
+            <button 
+              type="submit" 
+              className="btn btn-primary block full-width m-b"
+              disabled={ submitting }>
+              Sign In
+            </button>
+            <div className="extra-action">
+                <p className="welcome">Do not have an account?</p>
+                <Link
+                  to="/registration"
+                  className="sref"> 
+                   Registration
+                </Link>
+            </div>
+          </form>
+        </div>
       </div>
     )
   }
